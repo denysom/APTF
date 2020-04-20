@@ -27,6 +27,6 @@ setup(
         dependency_links=["https://github.com/denysom/APTF"],
         install_requires=[
                 'pytest',
-                'pyyaml',
+                'pyyaml'
                 ],
         namespace_packages=['aptf'])

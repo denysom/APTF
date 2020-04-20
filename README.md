@@ -1,9 +1,9 @@
 # APTF
 APT test framework
 
-In APTF dirctory:
+In APTF directory:
   pip3 install -e core
 
 To run:
-  pytest-3 --pyargs core
+  aptf-runner
 

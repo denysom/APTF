@@ -1,4 +1,4 @@
-from DockerClient import DockerClient
+from aptf.lib.DockerClient import DockerClient
 
 class DockerContainer(DockerClient):
 
@@ -36,7 +36,3 @@ class DockerContainer(DockerClient):
     def commit(self):
         commit_n = self.__container.commit()
         return commit_n
-
-
-    def create(self, image):
-        pass
