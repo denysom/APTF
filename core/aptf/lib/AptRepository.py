@@ -14,16 +14,14 @@ from multiprocessing import Process
 
 class AptRepository(Flask):
 
-    app = None
-
     def __init__(self, root_dir, **kwargs):
-        app = super(AptRepository, self).__init__(__name__, **kwargs)
+        super(AptRepository, self).__init__(__name__, **kwargs)
         self.root_dir = root_dir
         self.add_route("/<path:path>")
         self.server= None
 
     def add_route(self, rule):
-        self.add_url_rule(rule, self.app, self.list_files)
+        self.add_url_rule(rule, view_func=self.list_files)
 
     def list_files(self, path):
         files = []
